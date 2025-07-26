@@ -1,0 +1,206 @@
+/* Reset mặc định cho tất cả phần tử */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cấu hình chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.banner {
+	background: url("banner.jpeg") no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+	text-align: center !important;
+	color: white !important;
+}
+
+div a{text-decoration: none;}
+div a:hover{color:red;}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa các ảnh */
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 45%; /* Điều chỉnh kích thước ảnh */
+    border-radius: 15px; /* Bo góc ảnh */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+/* Container chính */
+.container {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 20px;
+    height: 37vh;
+    overflow-y: auto;
+    border-radius: 20px;
+    margin-left: 40px;
+    position: relative;
+    top: 40px;
+}
+
+.sidebar ul {
+    list-style: inside;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    background: #e6f7ff;
+}
+
+.team-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #ff5c33;
+}
+
+.team-info {
+    flex-grow: 1;
+}
+
+.team-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.team-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Nội dung chính */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 70px;
+}
+
+/* Nội dung hiển thị */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Hiệu ứng fadeIn */
+.content:nth-of-type(1) {
+    animation: fadeIn 1s forwards;
+}
+
+.content:nth-of-type(2) {
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slogan */
+.slogan {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    padding: 7rem 0.5rem;
+
+}
+
+/* Row Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0 5rem;
+}
+
+.block_3 {
+    flex: 0 0 33.3333%;
+}
+
+.block_3 a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #000033;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
