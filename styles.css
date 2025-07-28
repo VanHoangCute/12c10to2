@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 /* Reset mặc định cho tất cả phần tử */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -7,7 +9,7 @@
 
 /* Cấu hình chung cho body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -23,25 +25,25 @@ body {
 	color: white !important;
 }
 
-div a{text-decoration: none;}
-div a:hover{color:red;}
+div a { text-decoration: none; }
+div a:hover { color: red; }
 
 .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Khoảng cách giữa các ảnh */
+    gap: 20px;
     margin-top: 20px;
 }
 
 .image-gallery img {
-    width: 45%; /* Điều chỉnh kích thước ảnh */
-    border-radius: 15px; /* Bo góc ảnh */
+    width: 45%;
+    border-radius: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
 .image-gallery img:hover {
-    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+    transform: scale(1.05);
 }
 
 /* Container chính */
@@ -170,7 +172,6 @@ div a:hover{color:red;}
     text-align: center;
     width: 100%;
     padding: 7rem 0.5rem;
-
 }
 
 /* Row Layout */
@@ -203,4 +204,19 @@ footer {
 .footer-content {
     max-width: 800px;
     margin: auto;
+}
+
+/* Responsive font size */
+@media screen and (max-width: 768px) {
+    .content {
+        font-size: 16px;
+    }
+
+    .team-info h3 {
+        font-size: 16px;
+    }
+
+    .team-info p {
+        font-size: 14px;
+    }
 }
